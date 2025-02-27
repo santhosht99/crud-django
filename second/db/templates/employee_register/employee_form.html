@@ -1,0 +1,24 @@
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+<form action="" method="post" autocapitalize="off">
+    {% csrf_token %}
+    
+    <div class="row">
+        {{form}}
+    </div>
+   
+    <div class="row">
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'employee_list' %}" class="btn btn-secoundary btn-block btn-lg">
+                <i class='fas fa-stream'></i> Back to list
+            </a>
+        </div>
+    </div>
+    
+</form>
+{% endblock content %}
